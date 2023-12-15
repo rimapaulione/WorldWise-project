@@ -6,7 +6,7 @@ import {
   useCallback,
 } from "react";
 
-const BASE_URL = "https://react-project-worldwise.netlify.app/data/cities.json";
+const BASE_URL = "https://react-project-worldwise.netlify.app/cities.json";
 
 const CitiesContext = createContext();
 
