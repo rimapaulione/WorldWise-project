@@ -6,7 +6,7 @@ import {
   useCallback,
 } from "react";
 
-const BASE_URL = "https://react-project-worldwise.netlify.app/cities.json";
+const BASE_URL = "https://worldwise-json-server-d2b9ac109081.herokuapp.com";
 
 const CitiesContext = createContext();
 
@@ -71,7 +71,7 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
 
       try {
-        const res = await fetch(`${BASE_URL}/cities/cities.json`);
+        const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         dispatch({ type: "cities/loaded", payload: data });
       } catch {
